@@ -1,0 +1,117 @@
+@font-face {
+	font-family: 'aaargh';
+	src: url('../font/aaargh.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	margin: 0;
+	background-color: white;
+	overflow: hidden;
+}
+
+button {
+	height: 50px;
+	min-width: 200px;
+	border: 1px solid lightgrey;
+	border-radius: 2px;
+	background: white;
+	color: #555;
+	font-family: aaargh;
+	font-size: 1rem;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+button:hover {
+	background: lightgrey;
+}
+
+#canvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 480px;
+	border-radius: 2px;
+	box-shadow: 0 0 15px 5px #BBB;
+	cursor: none;
+}
+
+#lives {
+	position: absolute;
+	top: 30px;
+	left: 40px;
+	font-family: aaargh;
+	font-size: 32px;
+	color: #555;
+}
+
+#stage-container {
+	position: absolute;
+	top: 30px;
+	width: 100%;
+	text-align: center;
+	font-family: aaargh;
+	font-size: 32px;
+	color: #555;
+}
+
+#scorediv {
+	position: absolute;
+	top: 30px;
+	right: 40px;
+	font-family: aaargh;
+	font-size: 32px;
+	color: #555;
+}
+
+#playground-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 960px;
+	height: 480px;
+	background-color: rgba(255,255,255,0.6);
+	font-family: aaargh;
+	font-size: 36px;
+	text-align: center;
+	line-height: 480px;
+	color: #555;
+}
+
+#site-overlay {
+	background: rgba(255,255,255,0.5);
+	color: #555;
+	font-family: aaargh;
+	font-size: 3rem;
+}
+
+.hidden {
+	display: none !important;
+}
+
+.center {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	align-items: center;
+}
+
+.center > * {
+	position: relative;
+}
+
+.center::before, .center::after {
+	content: '';
+	margin: auto; /* Make it push flex items to the center */
+}
+
+.center > * {
+	flex: 0 0 auto;
+  	margin: 40px 0 40px 0;
+}

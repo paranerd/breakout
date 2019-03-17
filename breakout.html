@@ -1,25 +1,36 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
 <head>
 	<title>Breakout</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-	<link rel="stylesheet" href="design.css" />
+	<link rel="stylesheet" href="css/design.css" />
 </head>
 
 <body>
-	<canvas id="canvas" width=960 height=480>
-		Canvas not supported
-	</canvas>
-	<div id="overlay" class="hidden">Game Over.</div>
+	<!-- Canvas -->
+	<canvas id="canvas" width=960 height=480>Canvas not supported</canvas>
 
-	<div id="lifes"> &#9829 &#9829 &#9829 </div>
-	<div id="level-container">- Level <span id="level">1</span> -</div>
+	<!-- Playground Overlay -->
+	<div id="playground-overlay" class="hidden">Game Over.</div>
+
+	<!-- Info -->
+	<div id="lives"></div>
+	<div id="stage-container">- Stage <span id="stage">1</span> -</div>
 	<div id="scorediv">0</div>
 
-	<script type="text/javascript" src="js/requestAnimationFrame.js"></script>
-	<script type="text/javascript" src="js/breakout.js"></script>
+	<!-- Site Overlay -->
+	<div id="site-overlay" class="center">
+		<h1>Breakout</h1>
+		<button id="play">Play!</button>
+	</div>
 
-	</script>
-
+	<script type="text/javascript" src="js/util/rectangle.js"></script>
+	<script type="text/javascript" src="js/util/quadtree.js"></script>
+	<script type="text/javascript" src="js/util/collision.js"></script>
+	<script type="text/javascript" src="js/util/sound.js"></script>
+	<script type="text/javascript" src="js/stages.js"></script>
+	<script type="text/javascript" src="js/models/board.js"></script>
+	<script type="text/javascript" src="js/models/ball.js"></script>
+	<script type="text/javascript" src="js/models/block.js"></script>
+	<script type="text/javascript" src="js/game.js"></script>
 </body>
 </html>
